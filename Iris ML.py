@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 import pandas as pd
 dataset_path ="https://raw.githubusercontent.com/plotly/datasets/master/iris-data.csv"
 X = pd.read_csv(dataset_path)
@@ -36,6 +30,7 @@ import joblib
 joblib.dump(clf, 'iris.pkl')
 
 clf2 = joblib.load('iris.pkl')
+
 import numpy as np
 X_new = np.array([[6.7,3.1,4.7,1.5]])
 y = clf2.predict(X_new)
